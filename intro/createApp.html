@@ -6,6 +6,24 @@
 <!-- 五步驟，載入 React -->
 <!-- https://reactjs.org/docs/cdn-links.html#gatsby-focus-wrapper -->
 <!-- https://reactjs.org/docs/add-react-to-a-website.html#quickly-try-jsx -->
+ <!-- https://babeljs.io/docs/babel-standalone -->
+
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  console.log(React, ReactDOM);
+  function App(){
+    return <h1>Hello!React</h1>
+  }
+  const el = document.getElementById('root');
+  const root = ReactDOM.createRoot(el);
+  root.render(<App />);
+</script>
 
 <!-- 補充說明：定義 App 元件時，可自訂名稱但請使用大寫做開頭 -->
 <!-- 詳細說明文件：https://zh-hant.reactjs.org/docs/jsx-in-depth.html#user-defined-components-must-be-capitalized -->
