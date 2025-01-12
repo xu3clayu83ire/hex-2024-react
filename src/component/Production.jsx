@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import * as bootstrap from "bootstrap";
 
+import Nav from "./Nav.jsx";
+
 const API_BASE = import.meta.env.VITE_API_BASE;
 const API_PATH = import.meta.env.VITE_API_PATH;
 
@@ -31,12 +33,12 @@ function App() {
     description: "",
     content: "",
     is_enabled: false,
-    // features: {
-    //   description: "",
-    //   highlights: "",
-    //   payment: "",
-    //   shipping: "",
-    // },
+    features: {
+      description: "",
+      highlights: "",
+      payment: "",
+      shipping: "",
+    },
     imageUrl: "",
     imagesUrl: [],
   });
@@ -57,10 +59,10 @@ function App() {
       is_enabled: product.is_enabled || false,
       imagesUrl: product.imagesUrl || [],
       //features: product.features || {},
-      // featuresDescription: product.features?.description || "",
-      // featuresHighlights: product.features?.highlights || "",
-      // featuresPayment: product.features?.payment || "",
-      // featuresShipping: product.features?.shipping || "",
+      featuresDescription: product.features?.description || "",
+      featuresHighlights: product.features?.highlights || "",
+      featuresPayment: product.features?.payment || "",
+      featuresShipping: product.features?.shipping || "",
       //   imagesUrl_1: product.imagesUrl.length == 0 ? "" : product.imagesUrl[0],
       //   imagesUrl_2: product.imagesUrl.length == 0 ? "" : product.imagesUrl[1],
       //   imagesUrl_3: product.imagesUrl.length == 0 ? "" : product.imagesUrl[2],
@@ -74,23 +76,7 @@ function App() {
     productModalRef.current.hide();
   };
 
-  const handleModalInputChange = (e) => {
-    const { id, value, type, checked } = e.target;
-    setTemplateData((prevData) => ({
-      ...prevData,
-      [id]: type === "checkbox" ? checked : value,
-    }));
-  };
-
-  // const handleRemoveImage = () => {
-  //   setTemplateData((prevData) => {
-  //     const newImages = [...prevData.imagesUrl];
-  //     newImages.pop();
-  //     return { ...prevData, imagesUrl: newImages };
-  //   });
-  // };
-
-  const getProductData = async () => {
+  const getProductionData = async () => {
     try {
       const response = await axios.get(apiUrlProducts);
       setProducts(response.data.products);
@@ -117,7 +103,7 @@ function App() {
     if (modalType === "edit") {
       product = `product/${id}`;
     } else {
-      product = `product`; //新增
+      product = `product`;
     }
 
     const url = `${API_BASE}/api/${API_PATH}/admin/${product}`;
@@ -153,6 +139,14 @@ function App() {
     }
   };
 
+  const handleModalInputChange = (e) => {
+    const { id, value, type, checked } = e.target;
+    setTemplateData((prevData) => ({
+      ...prevData,
+      [id]: type === "checkbox" ? checked : value,
+    }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -163,7 +157,7 @@ function App() {
 
       axios.defaults.headers.common.Authorization = `${token}`;
 
-      getProductData();
+      getProductionData();
 
       setisAuth(true);
     } catch (error) {
@@ -185,7 +179,7 @@ function App() {
       getProductData();
       setisAuth(true);
     } catch (err) {
-      //console.log(err.response.data.message);
+      console.log(err.response.data.message);
     }
   };
 
@@ -222,7 +216,7 @@ function App() {
                 className="btn btn-outline-primary btn-sm"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
-                onClick={() => openModal({}, "new")}
+                onClick={() => openModal(templateData, "new")}
               >
                 新增
               </button>
@@ -514,8 +508,8 @@ function App() {
                         className="form-control form-control-sm"
                         id="inputDescription"
                         rows="5"
-                        //value={templateData.featuresDescription}
-                        //onChange={handleModalInputChange}
+                        value={templateData.featuresDescription}
+                        onChange={handleModalInputChange}
                       ></textarea>
                     </div>
                     <div className="col-12">
@@ -526,8 +520,8 @@ function App() {
                         className="form-control form-control-sm"
                         id="inputNote"
                         rows="5"
-                        //value={templateData.featuresHighlights}
-                        //onChange={handleModalInputChange}
+                        value={templateData.featuresHighlights}
+                        onChange={handleModalInputChange}
                       ></textarea>
                     </div>
                     <div className="col-12">
@@ -541,8 +535,8 @@ function App() {
                         type="text"
                         className="form-control form-control-sm"
                         id="inputShipping"
-                        //value={templateData.featuresShipping}
-                        //onChange={handleModalInputChange}
+                        value={templateData.featuresShipping}
+                        onChange={handleModalInputChange}
                       />
                     </div>
                     <div className="col-12">
@@ -556,8 +550,8 @@ function App() {
                         className="form-control form-control-sm"
                         id="inputPayment"
                         rows="5"
-                        //value={templateData.featuresPayment}
-                        //onChange={handleModalInputChange}
+                        value={templateData.featuresPayment}
+                        onChange={handleModalInputChange}
                       ></textarea>
                     </div>
                   </div>
