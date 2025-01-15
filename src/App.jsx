@@ -154,6 +154,17 @@ function App() {
       [id]: value,
     }));
   };
+  const handleImageChange = (index, value) => {
+    console.log(index, value);
+    setTempProduct((prevData) => {
+      let newImages = [];
+      if (prevData.imagesUrl?.length > 0) {
+        newImages = [...prevData.imagesUrl];
+      }
+      newImages[index] = value;
+      return { ...prevData, imagesUrl: newImages };
+    });
+  };
 
   // ---======================================---
   // 登入
@@ -536,43 +547,72 @@ function App() {
                     </div>
                   </div>
                   <hr className="text-secondary my-3" />
-                  {/* <div className="row">
-                  <div className="col-12">
-                    <label
-                      for="inputImageUrl"
-                      className="col-form-label-sm d-flex justify-content-between"
-                    >
-                      圖片網址
-                    </label>
-                    <div class="input-group mb-2">
-                      <span class="input-group-text">1</span>
-                      <input
-                        type="text"
-                        class="form-control form-control-sm"
-                        value={tempProduct.imagesUrl_1}
-                        onChange={handleModalInputChange}
-                      />
-                    </div>
-                    <div class="input-group mb-2">
-                      <span class="input-group-text">2</span>
-                      <input
-                        type="text"
-                        class="form-control form-control-sm"
-                        value={tempProduct.imagesUrl_2}
-                        onChange={handleModalInputChange}
-                      />
-                    </div>
-                    <div class="input-group mb-2">
-                      <span class="input-group-text">3</span>
-                      <input
-                        type="text"
-                        class="form-control form-control-sm"
-                        value={tempProduct.imagesUrl_3}
-                        onChange={handleModalInputChange}
-                      />
+                  <div className="row">
+                    <div className="col-12">
+                      <label
+                        htmlFor=""
+                        className="col-form-label-sm d-flex justify-content-between"
+                      >
+                        圖片網址(最多五個)
+                      </label>
+                      {tempProduct.imagesUrl?.length > 0
+                        ? tempProduct.imagesUrl
+                            .concat(
+                              Array.from(
+                                {
+                                  length: 5 - tempProduct.imagesUrl.length,
+                                },
+                                () => ""
+                              )
+                            )
+                            .map((item, idx) => (
+                              <>
+                                <div className="input-group mb-2">
+                                  <span className="input-group-text">
+                                    {idx + 1}
+                                  </span>
+                                  <input
+                                    type="text"
+                                    className="form-control form-control-sm"
+                                    value={item.length > 0 ? item : ""}
+                                    onChange={(e) =>
+                                      handleImageChange(idx, e.target.value)
+                                    }
+                                  />
+                                  <img
+                                    src={item}
+                                    width={100}
+                                    hight={100}
+                                    className="border"
+                                  ></img>
+                                </div>
+                              </>
+                            ))
+                        : Array.from({ length: 5 }, () => "").map(
+                            (item, idx) => (
+                              <div className="input-group mb-2">
+                                <span className="input-group-text">
+                                  {idx + 1}
+                                </span>
+                                <input
+                                  type="text"
+                                  className="form-control form-control-sm"
+                                  value={item}
+                                  onChange={(e) =>
+                                    handleImageChange(idx, e.target.value)
+                                  }
+                                />
+                                <img
+                                  src={item}
+                                  width={100}
+                                  hight={100}
+                                  className="border"
+                                ></img>
+                              </div>
+                            )
+                          )}
                     </div>
                   </div>
-                </div> */}
                 </form>
               ) : (
                 <>
