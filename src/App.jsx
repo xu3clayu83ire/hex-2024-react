@@ -9,6 +9,7 @@ const API_BASE = import.meta.env.VITE_API_BASE;
 const API_PATH = import.meta.env.VITE_API_PATH;
 const apiUrlLoginCheck = `${API_BASE}/api/user/check`;
 const apiUrlProducts = `${API_BASE}/api/${API_PATH}/admin/products`;
+const apiUrlImageUpload = `${API_BASE}/api/${API_PATH}/admin/upload`;
 
 function App() {
   const [products, setProducts] = useState([]);
