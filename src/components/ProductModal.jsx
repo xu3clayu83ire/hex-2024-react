@@ -75,11 +75,6 @@ function ProductModal({
     } catch (err) {
       message = message + "失敗";
       console.log(message, response.data.message);
-      //   if (modalType === "edit") {
-      //     console.error("更新失敗", err.response.data.message);
-      //   } else {
-      //     console.error("新增失敗", err.response.data.message);
-      //   }
     } finally {
       alert(message);
     }
@@ -127,7 +122,6 @@ function ProductModal({
           "Content-Type": "multipart/form-data",
         },
       });
-      //console.log(response.data.imageUrl);
       const rtnImageUrl = response.data.imageUrl;
       //"https://storage.googleapis.com/vue-course-api.appspot.com/annreact/1737293718044.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=or8s%2FJaGYjUKsOJYqvvsKPIDNrJE%2FYE3ixM1TD18Ul5d6bcZu7PE0TKHEn2gCCidAPwQ6uZM2UmDe%2BryLxlNcmxSPBlmfr35ylla%2BR6ihrgYRSDTBjevGLODpDAuek6fAaCvV%2FlvkAvpcXMQtTS2bG1BEiba9KfI0XzQcSsQ2QTwdrEVDrDQscEePymcoWjqR2k6Dy1xIVbZ%2BFY6HiVvzDl7NB3r61lATphudWMvpKOkJkcjc6EJueGa6vWvBF%2BJuGhAOSvStjKinmkhbZmJ9EbkMthHl4HHwXQHsOLn19Teu7IkIx35oEVBqqcZC4S4S6%2Bx%2BdYa9%2Fcx3MBQQ2tl9g%3D%3D";
 

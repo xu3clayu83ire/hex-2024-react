@@ -9,7 +9,6 @@ const API_BASE = import.meta.env.VITE_API_BASE;
 const API_PATH = import.meta.env.VITE_API_PATH;
 const apiUrlLoginCheck = `${API_BASE}/api/user/check`;
 const apiUrlProducts = `${API_BASE}/api/${API_PATH}/admin/products`;
-const apiUrlImageUpload = `${API_BASE}/api/${API_PATH}/admin/upload`;
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -80,64 +79,10 @@ function App() {
     category: "",
   });
   const handlePagination = (inputPage) => {
-    //console.log("inputPage=" + inputPage);
     if (inputPage == currentPage || inputPage > pagination.total_pages) return;
     setCurrentPage(inputPage);
     getProductList(inputPage);
   };
-  // const deleteProductData = async (id) => {
-  //   try {
-  //     const response = await axios.delete(
-  //       `${API_BASE}/api/${API_PATH}/admin/product/${id}`
-  //     );
-  //     console.log("刪除成功", response.data);
-  //     productModalRef.current.hide();
-  //     getProductList();
-  //   } catch (err) {
-  //     console.error("刪除失敗", err.response.data.message);
-  //   }
-  // };
-  // const createorUpdateProductData = async (id) => {
-  //   let product;
-  //   if (modalType === "edit") {
-  //     product = `product/${id}`;
-  //   } else {
-  //     product = `product`;
-  //   }
-
-  //   const url = `${API_BASE}/api/${API_PATH}/admin/${product}`;
-
-  //   const productData = {
-  //     data: {
-  //       ...tempProduct,
-  //       origin_price: Number(tempProduct.origin_price),
-  //       price: Number(tempProduct.price),
-  //       is_enabled: tempProduct.is_enabled ? 1 : 0,
-  //       imagesUrl: tempProduct.imagesUrl,
-  //     },
-  //   };
-
-  //   try {
-  //     let response;
-  //     if (modalType === "edit") {
-  //       response = await axios.put(url, productData);
-  //       console.log("更新成功", response.data);
-  //     } else {
-  //       response = await axios.post(url, productData);
-  //       console.log("新增成功", response.data);
-  //     }
-
-  //     productModalRef.current.hide();
-  //     getProductList();
-  //   } catch (err) {
-  //     if (modalType === "edit") {
-  //       console.error("更新失敗", err.response.data.message);
-  //     } else {
-  //       console.error("新增失敗", err.response.data.message);
-  //     }
-  //   }
-  // };
-
   // ---======================================---
   // Modal
   // ---======================================---
@@ -173,53 +118,11 @@ function App() {
     setModalType(null);
     productModalRef.current.hide();
   };
-  // const handleModalInputChange = (e) => {
-  //   const { id, value } = e.target;
-  //   setTempProduct((prevData) => ({
-  //     ...prevData,
-  //     [id]: value,
-  //   }));
-  // };
-  // const handleImageChange = (index, value) => {
-  //   console.log(index, value);
-  //   setTempProduct((prevData) => {
-  //     let newImages = [];
-  //     if (prevData.imagesUrl?.length > 0) {
-  //       newImages = [...prevData.imagesUrl];
-  //     }
-  //     newImages[index] = value;
-  //     return { ...prevData, imagesUrl: newImages };
-  //   });
-  // };
 
   // ---======================================---
   // 登入
   // ---======================================---
   const [isAuth, setisAuth] = useState(false);
-  // const [formData, setFormData] = useState({
-  //   username: "",
-  //   password: "",
-  // });
-  // const handleInputChange = (e) => {
-  //   const { id, value } = e.target;
-  //   setFormData((prevData) => ({
-  //     ...prevData,
-  //     [id]: value,
-  //   }));
-  // };
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const response = await axios.post(apiUrlSignin, formData);
-  //     const { token, expired } = response.data;
-  //     document.cookie = `hexToken=${token};expires=${new Date(expired)};`;
-  //     axios.defaults.headers.common.Authorization = `${token}`;
-  //     getProductList();
-  //     setisAuth(true);
-  //   } catch (error) {
-  //     console.log("登入失敗: " + error.response.data.message);
-  //   }
-  // };
   const checkAdmin = async () => {
     try {
       await axios.post(apiUrlLoginCheck);
