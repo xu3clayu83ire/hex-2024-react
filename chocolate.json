@@ -194,26 +194,24 @@
         "unit": "24入/盒"
     }
 ]
-
-{
-    "data": {
-        "category": "生巧克力",
-        "title": "85%經典生巧克力",
-        "description": "採用頂級厄瓜多可可豆，帶煙燻味及果香\n入層次豐富，給喜歡成熟大人滋味的你!",
-        "content": "源自厄瓜多的珍稀可可，打造入口即化的生巧克力，\n綿密細膩，香醇濃鬱，喚醒味蕾的奢華體驗。\n一塊巧克力，凝聚熱帶陽光與純粹甘美，為你帶來至臻享受！\n若存放於冰箱 請將巧克力拿出後，回溫15-20 分鐘讓巧克力的風味完美呈現。",
-        "payment": "銀行轉帳\nLINE Pay\nApple Pay\n信用卡一次付清（VISA / Master / JCB）",
-        "highlight": "全店宅配滿3000元免運費。\n保存期限：依外盒標示。\n保存方式：冷凍。\n商品皆為新鮮現做，帳款確認後將立即處理您的訂單，商品將於3個工作天內出貨(不含例假日)。\n外盒款式將依最新獲獎資訊更新及調整，圖片獎章資訊僅供參考，請依實際到貨產品包裝為主。\n",
-        "shipping": "黑貓低溫宅配 (台灣本島)",
-        "imageUrl": "https://i.pinimg.com/736x/e3/c4/18/e3c418f4ced3cb70c64f1c0ee7702688.jpg",
-        "imagesUrl": [
-            "https://i.pinimg.com/736x/e3/c4/18/e3c418f4ced3cb70c64f1c0ee7702688.jpg",
-            "https://i.pinimg.com/736x/a3/63/89/a36389abfe27a9ac55dffeba984389cc.jpg",
-            "https://i.pinimg.com/736x/dd/56/10/dd5610a3d0b2fea7ca311ce5b09f76be.jpg"
-        ],
-        "is_enabled": 1,
-        "num": 10,
-        "origin_price": 480,
-        "price": 400,
-        "unit": "125克/盒"
-    }
-}
+// upload
+// {
+//     "data": {
+//         "category": "薄片巧克力",
+//         "title": "蔓越莓巧克力薄片",
+//         "description": "選用美國當地優質蔓越莓乾，搭配頂級厄瓜多單一莊園巧克力精心調製而成，口感新鮮又清爽\n精美單片包裝，輕薄好入口!",
+//         "content": "細膩巧克力邂逅酸甜蔓越莓，創造獨特口感。\n每一口都融合濃醇與清爽，甜而不膩，酸中帶甜，讓味蕾盡情舞動。\n不只是零食，更是心情的完美調味料！\n若存放於冰箱 請將巧克力拿出後，回溫15-20 分鐘讓巧克力的風味完美呈現。",
+//         "highlight": "全店宅配滿3000元免運費。\n保存期限：依外盒標示。\n保存方式：冷凍。\n商品皆為新鮮現做，帳款確認後將立即處理您的訂單，商品將於3個工作天內出貨(不含例假日)。\n外盒款式將依最新獲獎資訊更新及調整，圖片獎章資訊僅供參考，請依實際到貨產品包裝為主。\n",
+//         "payment": "銀行轉帳\nLINE Pay\nApple Pay\n信用卡一次付清（VISA / Master / JCB）",
+//         "shipping": "黑貓低溫宅配 (台灣本島)",
+//         "imageUrl": "https://images.unsplash.com/photo-1545396635-f4865ca1448b?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//         "imagesUrl": [
+//             "https://images.unsplash.com/photo-1545396635-f4865ca1448b?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+//         ],
+//         "is_enabled": 1,
+//         "num": 10,
+//         "origin_price": 500,
+//         "price": 450,
+//         "unit": "24入/盒"
+//     }
+// }
