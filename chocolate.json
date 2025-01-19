@@ -14,7 +14,7 @@
             "https://i.pinimg.com/736x/dd/56/10/dd5610a3d0b2fea7ca311ce5b09f76be.jpg"
         ],
         "is_enabled": 1,
-        "num": 10,
+        "qty_total": 100,
         "origin_price": 480,
         "price": 400,
         "unit": "125克/盒"
@@ -34,7 +34,7 @@
             "https://i.pinimg.com/736x/ab/24/83/ab2483ebeb67053967d48f4681e95241.jpg"
         ],
         "is_enabled": 1,
-        "num": 10,
+        "qty_total": 100,
         "origin_price": 480,
         "price": 400,
         "unit": "125克/盒"
@@ -54,7 +54,7 @@
             "https://images.unsplash.com/photo-1623660053975-cf75a8be0908?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ],
         "is_enabled": 1,
-        "num": 10,
+        "qty_total": 100,
         "origin_price": 320,
         "price": 280,
         "unit": "95克/盒"
@@ -74,7 +74,7 @@
             "https://images.unsplash.com/photo-1618320362989-d8a9eb2a1e52?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ],
         "is_enabled": 1,
-        "num": 1,
+        "qty_total": 100,
         "origin_price": 320,
         "price": 280,
         "unit": "95克/盒"
@@ -93,7 +93,7 @@
             "https://i.pinimg.com/736x/76/f5/54/76f5548b198286f107aa3dea59041549.jpg"
         ],
         "is_enabled": 1,
-        "num": 1,
+        "qty_total": 100,
         "origin_price": 880,
         "price": 680,
         "unit": "經典禮盒9入/盒"
@@ -112,7 +112,7 @@
             "https://i.pinimg.com/736x/76/f5/54/76f5548b198286f107aa3dea59041549.jpg"
         ],
         "is_enabled": 1,
-        "num": 10,
+        "qty_total": 100,
         "origin_price": 980,
         "price": 880,
         "unit": "經典禮盒12入/盒"
@@ -131,7 +131,7 @@
             "https://i.pinimg.com/736x/76/f5/54/76f5548b198286f107aa3dea59041549.jpg"
         ],
         "is_enabled": 1,
-        "num": 10,
+        "qty_total": 100,
         "origin_price": 1280,
         "price": 980,
         "unit": "經典禮盒16入/盒"
@@ -150,7 +150,7 @@
             "https://images.unsplash.com/photo-1526081715791-7c538f86060e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ],
         "is_enabled": 1,
-        "num": 10,
+        "qty_total": 100,
         "origin_price": 1480,
         "price": 1280,
         "unit": "經典禮盒20入/盒"
@@ -170,7 +170,7 @@
             "https://images.unsplash.com/photo-1623000850264-08be785877bd?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ],
         "is_enabled": 1,
-        "num": 10,
+        "qty_total": 100,
         "origin_price": 500,
         "price": 450,
         "unit": "24入/盒"
@@ -188,7 +188,7 @@
             "https://images.unsplash.com/photo-1545396635-f4865ca1448b?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ],
         "is_enabled": 1,
-        "num": 10,
+        "qty_total": 100,
         "origin_price": 500,
         "price": 450,
         "unit": "24入/盒"
@@ -209,7 +209,7 @@
 //             "https://images.unsplash.com/photo-1545396635-f4865ca1448b?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 //         ],
 //         "is_enabled": 1,
-//         "num": 10,
+//         "qty_total": 100,
 //         "origin_price": 500,
 //         "price": 450,
 //         "unit": "24入/盒"
