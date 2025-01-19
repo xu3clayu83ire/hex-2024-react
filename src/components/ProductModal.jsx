@@ -31,6 +31,9 @@ function ProductModal({
       return { ...prevData, imagesUrl: newImages };
     });
   };
+  // ---======================================---
+  // 新增與編輯產品
+  // ---======================================---
   const createorUpdateProductData = async (id) => {
     let product;
     if (modalType === "edit") {
@@ -57,7 +60,7 @@ function ProductModal({
       },
     };
 
-    console.dir(productData);
+    //console.dir(productData);
 
     let message = modalType === "edit" ? "更新" : "新增";
 
@@ -79,6 +82,9 @@ function ProductModal({
       alert(message);
     }
   };
+  // ---======================================---
+  // 刪除產品
+  // ---======================================---
   const deleteProductData = async (id) => {
     try {
       const response = await axios.delete(
@@ -92,6 +98,9 @@ function ProductModal({
       console.error("刪除失敗", err.response.data.message);
     }
   };
+  // ---======================================---
+  // 圖片上傳
+  // ---======================================---
   const handleImageUpload = async () => {
     const imageUpload = document.querySelector("#imageUpload");
     if (
@@ -135,12 +144,18 @@ function ProductModal({
       alert("圖片上傳失敗");
     }
   };
+  // ---======================================---
+  // 刪除圖片
+  // ---======================================---
   const cleanImageText = (idx) => {
     const imageTexts = [...document.querySelectorAll(".imageText")];
     imageTexts[idx].value = "";
     const imageSmalls = [...document.querySelectorAll(".imageSmall")];
     imageSmalls[idx].src = "";
   };
+  // ---======================================---
+  // 渲染
+  // ---======================================---
   return (
     <>
       <div
