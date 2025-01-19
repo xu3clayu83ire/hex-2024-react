@@ -35,7 +35,7 @@ function Logon({ setisAuth, getProductList }) {
     <>
       <div className="container login">
         <div className="row justify-content-center">
-          <h1 className="h3 mb-3 font-weight-normal">請先登入</h1>
+          <h1 className="font-weight-normal h3 mb-3 text-center">請先登入</h1>
           <div className="col-8">
             <form id="form" className="form-signin" onSubmit={handleSubmit}>
               <div className="form-floating mb-3">

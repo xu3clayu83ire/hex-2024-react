@@ -174,7 +174,10 @@ function ProductModal({
                       </div>
                       <div className="row">
                         <div className="col-6">
-                          <label htmlFor="num" className="col-form-label-sm">
+                          <label
+                            htmlFor="qty_total"
+                            className="col-form-label-sm"
+                          >
                             產品數量
                           </label>
                           <input
@@ -182,8 +185,8 @@ function ProductModal({
                             max="50"
                             type="number"
                             className="form-control form-control-sm"
-                            id="num"
-                            value={tempProduct.num}
+                            id="qty_total"
+                            value={tempProduct.qty_total}
                             onChange={handleModalInputChange}
                           />
                         </div>
@@ -250,7 +253,7 @@ function ProductModal({
                     <div className="col">
                       <div className="col-12">
                         <label htmlFor="content" className="col-form-label-sm">
-                          商品描述
+                          商品內容
                         </label>
                         <textarea
                           className="form-control form-control-sm"
@@ -266,10 +269,10 @@ function ProductModal({
                         </label>
                         <textarea
                           className="form-control form-control-sm"
-                          id="note"
+                          id="highlight"
                           rows="5"
-                          //value={tempProduct.featuresHighlights}
-                          //onChange={handleModalInputChange}
+                          value={tempProduct.highlight}
+                          onChange={handleModalInputChange}
                         ></textarea>
                       </div>
                       <div className="col-12">
@@ -280,8 +283,8 @@ function ProductModal({
                           className="form-control form-control-sm"
                           id="shipping"
                           rows="5"
-                          //value={tempProduct.featuresHighlights}
-                          //onChange={handleModalInputChange}
+                          value={tempProduct.shipping}
+                          onChange={handleModalInputChange}
                         ></textarea>
                       </div>
                       <div className="col-12">
@@ -292,8 +295,8 @@ function ProductModal({
                           className="form-control form-control-sm"
                           id="payment"
                           rows="5"
-                          //value={tempProduct.featuresPayment}
-                          //onChange={handleModalInputChange}
+                          value={tempProduct.payment}
+                          onChange={handleModalInputChange}
                         ></textarea>
                       </div>
                     </div>

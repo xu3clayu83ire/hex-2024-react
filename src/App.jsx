@@ -17,14 +17,18 @@ function App() {
     imageUrl: "",
     title: "",
     category: "",
+    num: 0,
     unit: "",
-    num: "",
+    qty_total: "",
     origin_price: "",
     price: "",
     description: "",
     content: "",
     is_enabled: false,
     imagesUrl: [],
+    payment: "",
+    highlight: "",
+    shipping: "",
   });
   const [modalType, setModalType] = useState(null);
 
@@ -258,6 +262,9 @@ function App() {
                     售價
                   </th>
                   <th scope="col" width="80">
+                    庫存量
+                  </th>
+                  <th scope="col" width="80">
                     是否啟用
                   </th>
                   <th scope="col" width="150">
@@ -269,13 +276,14 @@ function App() {
                 {products && products.length > 0 ? (
                   products.map((item, idx) => (
                     <tr key={idx} className="text-center">
-                      <td>{++idx}</td>
+                      <td>{item.num}</td>
                       <td>{item.category}</td>
                       <td>{item.title}</td>
                       <td>
                         <del>{item.origin_price}</del>
                       </td>
                       <td>{item.price}</td>
+                      <td>{item.qty_total}</td>
                       <td>{item.is_enabled ? "啟用" : "未啟用"}</td>
                       <td className="text-end">
                         <div
