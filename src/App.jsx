@@ -148,14 +148,18 @@ function App() {
         imageUrl: "",
         title: "",
         category: "",
+        num: 0,
         unit: "",
-        num: "",
+        qty_total: "",
         origin_price: "",
         price: "",
         description: "",
         content: "",
         is_enabled: false,
         imagesUrl: [],
+        payment: "",
+        highlight: "",
+        shipping: "",
       });
     } else {
       setTempProduct(item);
